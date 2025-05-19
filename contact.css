@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:black;
+  padding: 2rem;
+}
+nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(94%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav .links a {
+  color: white;
+  font-weight: 550;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav .links a:hover {
+  color: purple;
+}
+
+nav .links a.active {
+  color:purple;
+  font-weight: 600;
+}
+
+nav .links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color:purple;
+}
+
+nav button {
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid black;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color:purple;
+  color: white;
+  box-shadow: purple;
+  transform: scale(1.05);
+}
+ h1 {
+  color:purple;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.social-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color:black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-links i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: purple;
+}
+
+.social-links span {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color:White;
+}
+
+.social-links a[href*="instagram"] i {
+  background: radial-gradient(circle at 30% 107%, 
+    #fdf497 0%, 
+    #fdf497 5%, 
+    #fd5949 45%, 
+    #d6249f 60%, 
+    #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem; 
+}
+
+.social-links a[href*="facebook"] i {
+  color: #1877f2; 
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .social-links i {
+    font-size: 2rem;
+  }
+  
+  .social-links span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .social-links {
+    gap: 0.8rem;
+  }
+  
+  .social-links a {
+    width: 80px;
+    height: 80px;
+    padding: 0.5rem;
+  }
+  
+  .social-links i {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .social-links span {
+    font-size: 0.8rem;
+  }
+}
